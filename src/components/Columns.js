@@ -9,7 +9,7 @@ class Column extends React.Component{
     render(){
         
         return (
-            <div className={this.props.styleName}>
+            <div className={` ${ this.props.styleData }`}>
                 {this.props.children}
             </div>
         )

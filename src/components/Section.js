@@ -11,7 +11,7 @@ class Section extends React.Component{
 
         return(
             <div className="container">
-                <div className={`row ${this.props.styleName}`}>
+                <div className={`row ${this.props.styleData}`}>
                     {this.props.children}
                 </div>
             </div>

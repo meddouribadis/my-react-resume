@@ -16,7 +16,7 @@ class Header extends React.Component{
         var array1 = [{name: '1. About', link: ''}, {name: '2. Experience', link: ''}, {name: '3. Work', link: ''}, {name: '4. Contact', link: ''}];
         
         return(
-            <header className="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar navyblue-background">
+            <header className="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar navyblue-background HeadMain">
             <a className="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap"><img src={logo} className="Header-logo" alt="logo" /></a>
 
             <div className="navbar-nav-scroll">
