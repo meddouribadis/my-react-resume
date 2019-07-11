@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:900&display=swap');
+
 .App {
   text-align: center;
+  background-color: #212121;
+  color: #FFFFFF;
+  font-family: 'Lato', sans-serif;
 }
 
 .HeadMain{
@@ -42,6 +47,35 @@
 
 .navyblue-background{
   background: #20232a;
+}
+
+.leftAlign{
+  text-align: left;
+}
+
+.firstSection h1{
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.firstSection h3{
+  font-size: 60px;
+  font-weight: normal;
+  color: #b3b3b3;
+}
+
+.firstSection h2{
+  font-size: 80px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.separator{
+  background-color: blue;
+}
+
+.firstParagraph{
+  max-width:500px;
 }
 
 @keyframes App-logo-spin {
