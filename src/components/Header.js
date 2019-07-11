@@ -2,6 +2,8 @@ import React from "react"
 import ReactDOM from "react-dom"
 import 'bootstrap/dist/css/bootstrap.css';
 import logo from '../logo.svg';
+import HeaderList from './HeaderList'
+import { checkServerIdentity } from "tls";
 
 class Header extends React.Component{
 
@@ -10,31 +12,17 @@ class Header extends React.Component{
     }
 
     render(){
+
+        var array1 = [{name: '1. About', link: ''}, {name: '2. Experience', link: ''}, {name: '3. Work', link: ''}, {name: '4. Contact', link: ''}];
+        
         return(
-            <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+            <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar navyblue-background">
             <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap"><img src={logo} className="Header-logo" alt="logo" /></a>
 
             <div class="navbar-nav-scroll">
-                <ul class="navbar-nav bd-navbar-nav flex-row">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/docs/4.3/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/docs/4.3/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Themes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://expo.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');" target="_blank" rel="noopener">Expo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Blog</a>
-                </li>
-                </ul>
+
+                <HeaderList tableau={array1} />
+
             </div>
 
             <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
