@@ -20,10 +20,6 @@
   transition: 0.5s;
 }
 
-.Mini-logo:hover{
-  transform: scale(1.03);
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
