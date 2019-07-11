@@ -9,16 +9,51 @@ class Header extends React.Component{
 
     constructor(){
         super()
+        
+        this.state = {
+            prevScrollpos: window.pageYOffset,
+            visible: true
+        };
+
+    }
+
+    handleScroll = () => {
+      
+        const currentScrollPos = window.pageYOffset;
+        const visible = currentScrollPos < 60;
+      
+        this.setState({
+          prevScrollpos: currentScrollPos,
+          visible
+        });
+    };
+
+    componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll);
+    }
+      
+      componentWillUnmount() {
+        window.removeEventListener("scroll", this.handleScroll);
     }
 
     render(){
 
         var array1 = [{name: '1. About', link: ''}, {name: '2. Experience', link: ''}, {name: '3. Work', link: ''}, {name: '4. Contact', link: ''}];
         
+        var textTest = () => {
+            if(this.state.visible){
+                return ' headerVs'
+            }
+
+            else{
+                return ''
+            }
+        }
+
         return(
             <header className="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar navyblue-background HeadMain">
             <a className="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap"><img src={logo} className="Header-logo" alt="logo" /></a>
-
+            <p>{textTest()}</p>
             <div className="navbar-nav-scroll">
 
                 <HeaderList tableau={array1} />
