@@ -78,6 +78,25 @@
   max-width:500px;
 }
 
+.timeline{
+  display:flex;
+  flex-direction: row;
+}
+
+.timeline ul,li,ol {
+  list-style: none;
+}
+
+.experienceList li{
+  border-left: 1px solid #3d3d3d;
+  padding: 15px 20px;
+}
+
+.experienceList a{
+  
+}
+
+
 .headerVs{
   position: fixed;
   top: 0;
@@ -88,6 +107,7 @@
   -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
   animation-name: headerY;
   animation-duration: 1s;
+  transition-timing-function: ease-in-out;
 }
 
 hr{
@@ -104,6 +124,6 @@ hr{
 }
 
 @keyframes headerY {
-  from {transform: translateY(-80px);}
+  from {transform: translateY(-150px);}
   to {transform: translateY(0px);}
 }

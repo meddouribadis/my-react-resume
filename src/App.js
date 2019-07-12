@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import Header from "./components/Header"
 import Section from "./components/Section"
 import Columns from "./components/Columns"
-
+import Timelines from "./components/Timeline"
 import './App.css';
 
 class App extends React.Component{
@@ -65,8 +65,13 @@ class App extends React.Component{
           <Section styleData="align-items-center" >
     
             <Columns styleData="col-12 mt-5 mx-auto col-md-12">
-            <h3 className="mb-2">02. Experience</h3>
+              <h3 className="mb-2">02. Experience</h3>
             </Columns>
+
+            <Columns styleData="col-8 mt-5 mx-auto col-md-8">
+              <Timelines />
+            </Columns>
+
           </Section>  
         </div>
     )
