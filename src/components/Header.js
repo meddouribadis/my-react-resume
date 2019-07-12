@@ -51,9 +51,8 @@ class Header extends React.Component{
         }
 
         return(
-            <header className="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar navyblue-background HeadMain">
+            <header className={`navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar navyblue-background HeadMain${this.state.visible ? "" : " headerVs"}`}>
             <a className="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap"><img src={logo} className="Header-logo" alt="logo" /></a>
-            <p>{textTest()}</p>
             <div className="navbar-nav-scroll">
 
                 <HeaderList tableau={array1} />

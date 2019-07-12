@@ -7,14 +7,6 @@ import Columns from "./components/Columns"
 import './App.css';
 
 class App extends React.Component{
-  constructor(){
-    super()
-
-    this.state = {
-      scrolled: true
-    }
-
-  }
 
   render(){
 

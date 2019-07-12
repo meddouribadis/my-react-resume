@@ -78,6 +78,18 @@
   max-width:500px;
 }
 
+.headerVs{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  -webkit-animation-name: headerY; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: headerY;
+  animation-duration: 1s;
+}
+
 hr{
   border-top: 1px solid rgba(255, 255, 255, 0.05)!important;
 }
@@ -89,4 +101,9 @@ hr{
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes headerY {
+  from {transform: translateY(-80px);}
+  to {transform: translateY(0px);}
 }
