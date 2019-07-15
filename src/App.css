@@ -92,8 +92,14 @@
   padding: 15px 20px;
 }
 
-.experienceList a{
-  
+.experienceList li:hover{
+  background-color: #292929;
+  border-left: 1px solid #843d3d;
+  cursor: pointer;
+}
+
+.experienceList li a:hover{
+    color: burlywood;
 }
 
 
