@@ -81,6 +81,7 @@
 .timeline{
   display:flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .timeline ul,li,ol {
@@ -100,6 +101,10 @@
 
 .experienceList li a:hover{
     color: burlywood;
+}
+
+.displayNone{
+  display:none!important;
 }
 
 

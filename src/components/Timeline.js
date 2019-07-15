@@ -5,11 +5,21 @@ class Timeline extends React.Component{
 
     constructor(){
         super()
+
+        this.state = {
+            active : 2019
+        }
+
         this.revealTheContent = this.revealTheContent.bind(this);
     }
 
     revealTheContent(divId){
-        return console.log(divId.currentTarget.dataset.id);
+
+        let newID = divId.currentTarget.dataset.id;
+            this.setState(() => ({ active: newID  })
+        )
+
+        console.log(this.state.active)
     }
 
     render(){
@@ -28,9 +38,9 @@ class Timeline extends React.Component{
                 <div className="experienceTexts">
                     <div>
                         <ul>
-                            <li id="2019" className="textData">Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
-                            <li id="2018" className="textData">Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, Wordpress, Prismic, and Netlify</li>
-                            <li id="2017" className="textData">Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li>
+                            <li id="2019" className={`textData ${(this.state.active == 2019) ? "" : "displayNone"}`}>Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
+                            <li id="2018" className={`textData ${(this.state.active == 2018) ? "" : "displayNone"}`}>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, Wordpress, Prismic, and Netlify</li>
+                            <li id="2017" className={`textData ${(this.state.active == 2017) ? "" : "displayNone"}`}>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li>
                         </ul>
                     </div>
                 </div>
