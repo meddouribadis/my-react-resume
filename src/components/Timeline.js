@@ -28,11 +28,11 @@ class Timeline extends React.Component{
             <div className="timeline">
 
                 <ul role="tablist" className="experienceList">
-                    <li onClick={this.revealTheContent.bind(this)} data-id="2019"><a>2019</a></li>
-                    <li onClick={this.revealTheContent.bind(this)} data-id="2018"><a>2018</a></li>
-                    <li onClick={this.revealTheContent.bind(this)} data-id="2017"><a>2017</a></li>
-                    <li onClick={this.revealTheContent.bind(this)} data-id="2016"><a>2016</a></li>
-                    <li onClick={this.revealTheContent.bind(this)} data-id="2015"><a>2015</a></li>
+                    <li className={`${(this.state.active == 2019) ? "activatedTimeline" : ""}`} onClick={this.revealTheContent.bind(this)} data-id="2019"><a>2019</a></li>
+                    <li className={`${(this.state.active == 2018) ? "activatedTimeline" : ""}`} onClick={this.revealTheContent.bind(this)} data-id="2018"><a>2018</a></li>
+                    <li className={`${(this.state.active == 2017) ? "activatedTimeline" : ""}`} onClick={this.revealTheContent.bind(this)} data-id="2017"><a>2017</a></li>
+                    <li className={`${(this.state.active == 2016) ? "activatedTimeline" : ""}`} onClick={this.revealTheContent.bind(this)} data-id="2016"><a>2016</a></li>
+                    <li className={`${(this.state.active == 2015) ? "activatedTimeline" : ""}`} onClick={this.revealTheContent.bind(this)} data-id="2015"><a>2015</a></li>
                 </ul>
 
                 <div className="experienceTexts">
