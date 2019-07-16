@@ -120,6 +120,11 @@
   display:none!important;
 }
 
+.decalage{
+  min-height:66px;
+  height:66px;
+}
+
 .startAnimation{
   -webkit-animation-name: revealOpacityZ; /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
@@ -138,6 +143,14 @@
   -webkit-animation-name: headerY; /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
   animation-name: headerY;
+  animation-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.invisibleAnimated{
+  -webkit-animation-name: dissapear; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: dissapear;
   animation-duration: 1s;
   transition-timing-function: ease-in-out;
 }
@@ -168,4 +181,9 @@ hr{
 @keyframes revealOpacityZ {
   from {transform: translateX(-25px); opacity: 0;}
   to {transform: translateX(0px); opacity: 1!important;}
+}
+
+@keyframes dissapear {
+  from {transform: translateX(0px); opacity: 1;}
+  to {transform: translateX(-25px); opacity: 0;}
 }
