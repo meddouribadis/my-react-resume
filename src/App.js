@@ -7,6 +7,12 @@ import Timelines from "./components/Timeline"
 import './App.css';
 
 class App extends React.Component{
+  myref;
+
+  constructor(){
+    super()
+    this.myref = React.createRef();
+  }
 
   render(){
 

@@ -120,6 +120,14 @@
   display:none!important;
 }
 
+.startAnimation{
+  -webkit-animation-name: revealOpacityZ; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: revealOpacityZ;
+  animation-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
+
 
 .headerVs{
   position: fixed;
@@ -154,5 +162,10 @@ hr{
 
 @keyframes revealOpacity {
   from {transform: translateX(-15px); opacity: 0;}
-  to {transform: translateX(0px); opacity: 1;}
+  to {transform: translateX(0px); opacity: 1!important;}
+}
+
+@keyframes revealOpacityZ {
+  from {transform: translateX(-25px); opacity: 0;}
+  to {transform: translateX(0px); opacity: 1!important;}
 }
