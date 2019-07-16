@@ -4,14 +4,13 @@ import Header from "./components/Header"
 import Section from "./components/Section"
 import Columns from "./components/Columns"
 import Timelines from "./components/Timeline"
+import Footer from "./components/Footer"
 import './App.css';
 
 class App extends React.Component{
-  myref;
 
   constructor(){
     super()
-    this.myref = React.createRef();
   }
 
   render(){
@@ -81,7 +80,8 @@ class App extends React.Component{
             <Columns styleData="col-12 mt-5 mx-auto col-md-12">
               <hr />        
             </Columns>
-          </Section>  
+          </Section>
+          <Footer />
         </div>
     )
 

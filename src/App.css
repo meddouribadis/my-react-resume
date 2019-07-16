@@ -155,6 +155,16 @@
   transition-timing-function: ease-in-out;
 }
 
+footer p{
+  margin: 0;
+}
+
+footer{
+  padding: 20px;
+  background: linear-gradient(to left, #212121, #263238);
+  border-top: 1px solid white;
+}
+
 hr{
   border-top: 1px solid rgba(255, 255, 255, 0.05)!important;
 }
