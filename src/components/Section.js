@@ -21,7 +21,7 @@ class Section extends React.Component{
         const options = {
             onChange: this.handleChange,
             root: '#scrolling-container',
-            rootMargin: '0% 0% -25%',
+            rootMargin: '0% 0% -10%',
         };
 
         return(
