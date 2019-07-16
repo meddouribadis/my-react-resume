@@ -93,6 +93,14 @@
   padding: 15px 20px;
 }
 
+.opacReveal{
+  -webkit-animation-name: revealOpacity; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: revealOpacity;
+  animation-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
 .activatedTimeline{
   background-color: #292929;
   border-left: 2px solid #843d3d!important;
@@ -142,4 +150,9 @@ hr{
 @keyframes headerY {
   from {transform: translateY(-150px);}
   to {transform: translateY(0px);}
+}
+
+@keyframes revealOpacity {
+  from {transform: translateX(-15px); opacity: 0;}
+  to {transform: translateX(0px); opacity: 1;}
 }

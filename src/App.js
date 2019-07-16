@@ -17,10 +17,10 @@ class App extends React.Component{
     
             <Columns styleData="col-12 mt-5 mx-auto col-md-12 order-md-12 leftAlign firstSection">
               <h1>Hi, my name is</h1>
-              <h2>Badis Meddouri</h2>
+              <h2>Badis Meddouri 😍</h2>
               <h3 className="mb-5">I build things for the web.</h3>
               <p className="firstParagraph mb-5">I'm a software engineer based in Paris (France), specializing in building (and occasionally designing) exceptional, high-quality websites and applications.</p>
-              <a href="" className="btn btn-primary btn-lg mb-5">Contact me !</a>
+              <a href="/" className="btn btn-primary btn-lg mb-5">Contact me !</a>
               <hr />
             </Columns>
     
@@ -72,6 +72,9 @@ class App extends React.Component{
               <Timelines />
             </Columns>
 
+            <Columns styleData="col-12 mt-5 mx-auto col-md-12">
+              <hr />        
+            </Columns>
           </Section>  
         </div>
     )
