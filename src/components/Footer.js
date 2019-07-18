@@ -8,7 +8,7 @@ class Footer extends React.Component {
 
     render() {
         return (
-            <footer>
+            <footer className="navyblue-background">
                 <p>Developped by MEDDOURI Badis</p>
                 <p>Made with React in 2019</p>
             </footer>

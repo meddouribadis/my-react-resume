@@ -18,7 +18,7 @@ class App extends React.Component{
     return(
         <div className="App">
           <Header />
-          <Section styleData="align-items-center mt-5" >
+          <Section styleData="align-items-center mt-5" animationName="opacReveal" >
     
             <Columns styleData="col-12 mt-5 mx-auto col-md-12 order-md-12 leftAlign firstSection">
               <h1>Hi, my name is</h1>
@@ -31,7 +31,7 @@ class App extends React.Component{
     
           </Section>
     
-          <Section styleData="align-items-center" >
+          <Section styleData="align-items-center" animationName="startAnimation">
     
             <Columns styleData="col-12 mt-5 mx-auto col-md-12">
             <h3 className="mb-2">01. About me</h3>
@@ -67,7 +67,7 @@ class App extends React.Component{
             </Columns>
           </Section>
     
-          <Section styleData="align-items-center" >
+          <Section styleData="align-items-center" animationName="startAnimationVS">
     
             <Columns styleData="col-12 mt-5 mx-auto col-md-12">
               <h3 className="mb-2">02. Experience</h3>
@@ -81,6 +81,19 @@ class App extends React.Component{
               <hr />        
             </Columns>
           </Section>
+
+          <Section styleData="align-items-center" animationName="startAnimation" >
+    
+            <Columns styleData="col-12 mt-5 mx-auto col-md-12">
+              <h3 className="mb-2">03. Some projects</h3>
+            </Columns>
+
+            <Columns styleData="col-8 mt-5 mx-auto col-md-8">
+              <p>Blablabla</p>
+            </Columns>
+
+          </Section>
+
           <Footer />
         </div>
     )

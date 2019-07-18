@@ -10,6 +10,7 @@ class Section extends React.Component{
         this.state={
             isIntersecting: false,
         }
+
     }
 
     handleChange = ({ isIntersecting }) => {
@@ -17,6 +18,9 @@ class Section extends React.Component{
     };
     
     render(){
+
+        let animationN = this.props.animationName;
+        console.log(this.props.animationName)
 
         const options = {
             onChange: this.handleChange,
@@ -27,7 +31,7 @@ class Section extends React.Component{
         return(
             <div className="container">
                 <Observer {...options}>
-                    <div className={`row ${this.props.styleData} ${this.state.isIntersecting ? "startAnimation" : "invisible"}`}>
+                    <div className={`row ${this.props.styleData} ${this.state.isIntersecting ? animationN : "invisible"}`}>
                         {this.props.children}
                     </div>
                 </Observer>
