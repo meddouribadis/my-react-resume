@@ -5,6 +5,8 @@ import Section from "./components/Section"
 import Columns from "./components/Columns"
 import Timelines from "./components/Timeline"
 import Footer from "./components/Footer"
+import Image from "./components/Image"
+import Observer from '@researchgate/react-intersection-observer'
 import './App.css';
 
 class App extends React.Component{
@@ -59,7 +61,7 @@ class App extends React.Component{
             </Columns>
     
             <Columns styleData="col-3 mt-5 mx-auto col-md-3">
-              <img className="img-fluid rounded" src="https://avatars3.githubusercontent.com/u/37505772?s=460&v=4"/>
+              <Image source="https://avatars3.githubusercontent.com/u/37505772?s=460&v=4" styleData="img-fluid rounded" />
             </Columns>
     
             <Columns styleData="col-12 mt-5 mx-auto col-md-12">

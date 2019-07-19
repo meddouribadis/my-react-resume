@@ -20,7 +20,6 @@ class Section extends React.Component{
     render(){
 
         let animationN = this.props.animationName;
-        console.log(this.props.animationName)
 
         const options = {
             onChange: this.handleChange,
@@ -28,11 +27,15 @@ class Section extends React.Component{
             rootMargin: '0% 0% -10%',
         };
 
+        const contentWithProps = React.Children.map(this.props.children, child =>
+            React.cloneElement(child, { isIntersecting: this.state.isIntersecting })
+        );
+
         return(
             <div className="container">
                 <Observer {...options}>
                     <div className={`row ${this.props.styleData} ${this.state.isIntersecting ? animationN : "invisible"}`}>
-                        {this.props.children}
+                        {contentWithProps}
                     </div>
                 </Observer>
             </div>

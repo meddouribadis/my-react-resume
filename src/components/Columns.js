@@ -7,10 +7,14 @@ class Column extends React.Component{
     }
 
     render(){
+
+        const contentWithProps = React.Children.map(this.props.children, child =>
+            React.cloneElement(child, { isIntersecting: this.props.isIntersecting })
+        );
         
         return (
             <div className={`${ this.props.styleData }`}>
-                {this.props.children}
+                {contentWithProps}
             </div>
         )
 

@@ -162,6 +162,14 @@
   transition-timing-function: ease-in-out;
 }
 
+.opacRevealLong{
+  -webkit-animation-name: revealOpacity; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: revealOpacity;
+  animation-duration: 3s;
+  transition-timing-function: cubic-bezier(1,.01,.6,.45);
+}
+
 footer p{
   margin: 0;
 }
