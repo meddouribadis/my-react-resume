@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:900&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
   background-color: #212121;
@@ -43,6 +47,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.header-nav{
+  cursor:pointer;
 }
 
 .navyblue-background{
