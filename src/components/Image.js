@@ -8,10 +8,6 @@ class Image extends React.Component{
     }
 
     render(){
-
-        console.log("Props Image : " + this.props)
-        console.log(this.props)
-
         return(
             <img src={this.props.source} className={`${this.props.styleData} ${this.props.isIntersecting ? this.props.animationName : ""}`} />
         )

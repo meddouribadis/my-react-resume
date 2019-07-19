@@ -13,14 +13,20 @@ class App extends React.Component{
 
   constructor(){
     super()
+    this.myRef = React.createRef();
+    this.myRefDeux = React.createRef();
+    this.myRefTrois = React.createRef();
+    this.myRefQuatre = React.createRef()
   }
 
   render(){
 
+    var array1 = [{name: '1. About', link: this.myRef}, {name: '2. Experience', link: this.myRefDeux}, {name: '3. Work', link: this.myRefTrois}, {name: '4. Contact', link: this.myRefQuatre}];
+
     return(
         <div className="App">
-          <Header />
-          <Section styleData="align-items-center mt-5" animationName="opacReveal" >
+          <Header elemArray={array1} />
+          <Section styleData="align-items-center mt-5" animationName="opacReveal" refProp={this.myRefDeux}>
     
             <Columns styleData="col-12 mt-5 mx-auto col-md-12 order-md-12 leftAlign firstSection">
               <h1>Hi, my name is</h1>
@@ -33,7 +39,7 @@ class App extends React.Component{
     
           </Section>
     
-          <Section styleData="align-items-center" animationName="startAnimation">
+          <Section styleData="align-items-center" animationName="startAnimation" refProp={this.myRef}>
     
             <Columns styleData="col-12 mt-5 mx-auto col-md-12">
             <h3 className="mb-2">01. About me</h3>
@@ -69,7 +75,7 @@ class App extends React.Component{
             </Columns>
           </Section>
     
-          <Section styleData="align-items-center" animationName="startAnimationVS">
+          <Section styleData="align-items-center" animationName="startAnimationVS" refProp={this.myRefTrois}>
     
             <Columns styleData="col-12 mt-5 mx-auto col-md-12">
               <h3 className="mb-2">02. Experience</h3>
@@ -84,7 +90,7 @@ class App extends React.Component{
             </Columns>
           </Section>
 
-          <Section styleData="align-items-center" animationName="startAnimation" >
+          <Section styleData="align-items-center" animationName="startAnimation" refProp={this.myRefQuatre}>
     
             <Columns styleData="col-12 mt-5 mx-auto col-md-12">
               <h3 className="mb-2">03. Some projects</h3>

@@ -8,10 +8,20 @@ class HeaderList extends React.Component{
         super()
     }
 
-    render(){
+    scrollToRef = ref => {
+        console.log("Ref")
+        console.log(ref)
 
+        if(ref != undefined && ref.current != null){
+            window.scrollTo(0, ref.current.offsetTop)
+        }
+    }
+    
+
+    render(){
+        
         let liList = this.props.tableau.map((x) => {
-           return <li className="nav-item"><a className="nav-link" href={x.link}>{x.name}</a></li>
+           return <li className="nav-item"><span className="nav-link" onClick={e => this.scrollToRef(x.link)}>{x.name}</span></li>
         })
         
         return(

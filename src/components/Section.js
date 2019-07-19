@@ -32,7 +32,7 @@ class Section extends React.Component{
         );
 
         return(
-            <div className="container">
+            <div className="container" ref={this.props.refProp}>
                 <Observer {...options}>
                     <div className={`row ${this.props.styleData} ${this.state.isIntersecting ? animationN : "invisible"}`}>
                         {contentWithProps}

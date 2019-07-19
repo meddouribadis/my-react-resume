@@ -38,7 +38,7 @@ class Header extends React.Component{
 
     render(){
 
-        var array1 = [{name: '1. About', link: ''}, {name: '2. Experience', link: ''}, {name: '3. Work', link: ''}, {name: '4. Contact', link: ''}];
+        var array1 = this.props.elemArray;
 
         return(
             <div className="Headermain">
