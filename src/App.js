@@ -26,7 +26,7 @@ class App extends React.Component{
     return(
         <div className="App">
           <Header elemArray={array1} />
-          <Section styleData="align-items-center mt-5" animationName="opacReveal" refProp={this.myRefDeux}>
+          <Section styleData="align-items-center mt-5" animationName="opacReveal" refProp={this.myRef}>
     
             <Columns styleData="col-12 mt-5 mx-auto col-md-12 order-md-12 leftAlign firstSection">
               <h1>Hi, my name is</h1>
@@ -39,7 +39,7 @@ class App extends React.Component{
     
           </Section>
     
-          <Section styleData="align-items-center" animationName="startAnimation" refProp={this.myRef}>
+          <Section styleData="align-items-center" animationName="startAnimation" refProp={this.myRefDeux}>
     
             <Columns styleData="col-12 mt-5 mx-auto col-md-12">
             <h3 className="mb-2">01. About me</h3>
